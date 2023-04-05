@@ -1,12 +1,12 @@
 <script lang="ts">
     import Display from "./janken-promise/display.svelte";
     import Editor from "./janken-promise/editor.svelte";
-    let page = 0
-    let data: {query: string; promise: string}
-    // let data = {
-    //     query: "fortune",
-    //     promise: "บังจี้จั้มม บังจี้จั้มม บังจี้จั้มม บังจี้จั้มม บังจี้จั้มม บังจี้จั้มม บังจี้จั้มม บังจี้จั้มม v บังจี้จั้มม บังจี้จั้มม "
-    // }
+    let page = 1
+    // let data: {query: string; promise: string}
+    let data = {
+        query: "fortune",
+        promise: "บังจี้จั้มม บังจี้จั้มม บังจี้จั้มม บังจี้จั้มม บังจี้จั้มม บังจี้จั้มม บังจี้จั้มม บังจี้จั้มม v บังจี้จั้มม"
+    }
     const nextPage = () => {
         page = 1
     }

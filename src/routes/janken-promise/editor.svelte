@@ -101,12 +101,17 @@
 
 <div class="flex flex-col justify-center items-center h-[100vh] gap-4">
 	<h1>เลือกเมมเบอร์</h1>
-	<Typeahead data={memberState} {extract} let:result let:index class="text-gray-800 rounded" hideLabel limit={3} bind:value={query}>
-	  <div class="flex flex-row gap-4 text-gray-800 h-[40px] items-center justify-start">
-		  <img class="w-auto h-[40px] rounded-full" src="profile/icon/{result.original.state}.webp" alt="">
-		  <strong class="text-lg">{@html result.string}</strong>
+	<div class="flex flex-row gap-2">
+		{#if members.includes(data.query)}
+			<img class="w-auto h-[40px] rounded-full" src="profile/icon/{data.query}.webp" alt="">
+		{/if}
+		<Typeahead data={memberState} {extract} let:result let:index class="text-gray-800 rounded" hideLabel limit={3} bind:value={query}>
+		  <div class="flex flex-row gap-4 text-gray-800 h-[40px] items-center justify-start">
+			  <img class="w-auto h-[40px] rounded-full" src="profile/icon/{result.original.state}.webp" alt="">
+			  <strong class="text-lg">{@html result.string}</strong>
+		</div>
+		</Typeahead>
 	</div>
-	</Typeahead>
 	คำสัญญา
 	<textarea name="" id="" cols="30" rows="10" bind:value={promise} class="text-gray-800 rounded"></textarea>
 	<Button size="xl" on:click={() => submit()}>Preview</Button>

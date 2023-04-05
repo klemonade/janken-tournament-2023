@@ -81,14 +81,27 @@
             </section>
         {/if}
     <h1 class="text-xl">{data.query.replace(/^\w/, (c) => c.toUpperCase())} จ้องคุณอยู่</h1>
-    <div class="w-[250px] h-[250px] relative" id="canvas"  style="{onShareResult? "transform: scale(3, 3);": ""}">
+    <div class="w-[300px] h-[300px] relative" id="canvas"  style="{onShareResult? "transform: scale(3, 3);": ""}">
         <img src="janken-wish/members/{data.query.toLowerCase()}.webp" class="w-full h-full absolute top-0 left-0" alt="">
         {#if onShareResult}
-        <div class="flex flex-col absolute w-[120px] h-[60px] top-[125px] left-[120px] items-center justify-center">
+        <div class="flex flex-col justify-center items-center absolute w-[200px] top-[85px] left-[106px] gap-0 text-sm drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+            <div class="flex flex-row items-baseline gap-1">ถ้า<h1 class="text-lg font-bold">{data.query.toUpperCase()}</h1> <div>เป็น<u>เซนเตอร์</u></div></div>
+           
+            <p class="text-lg">ฉันจะ...</p>
+        </div>
+        {:else}
+        <div class="flex flex-col justify-center items-center absolute w-[200px] top-[95px] left-[106px] gap-0 text-sm drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+            <div class="flex flex-row items-baseline gap-1">ถ้า<h1 class="text-lg font-bold">{data.query.toUpperCase()}</h1> <div>เป็น<u>เซนเตอร์</u></div></div>
+           
+            <p class="text-lg">ฉันจะ...</p>
+        </div>
+        {/if}
+        {#if onShareResult}
+        <div class="flex flex-col absolute w-[150px] h-[90px] top-[150px] left-[140px] items-center justify-center">
             <p class="text-xs text-center">{data.promise}</p>
         </div>
         {:else}
-        <div class="flex flex-col absolute w-[120px] h-[60px] top-[134px] left-[120px] items-center justify-center">
+        <div class="flex flex-col absolute w-[150px] h-[90px] top-[155px] left-[140px] items-center justify-center">
             <p class="text-xs text-center">{data.promise}</p>
         </div>
         {/if}
