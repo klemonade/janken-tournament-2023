@@ -94,5 +94,39 @@ const members16 = [
     "Mei",
 ]
 
+const memberscgm = [
+	'Angel',
+	'Aom',
+	'Champoo',
+	'Fahsai',
+	'Fortune',
+	'Izurina',
+	'Jayda',
+	'Jjae',
+	'Kaiwan',
+	'Kaning',
+	'Kyla',
+	'Latin',
+	'Marmink',
+	'Meen',
+	'Mei',
+	'Milk',
+	'Nena',
+	'Nenie',
+	'Parima',
+	'Pim',
+	'Ping',
+	'Punch',
+	'Sita',
+	'Papang',
+	'Ginna',
+	'Twobam',
+	'Emma',
+	'Nana',
+	'Jingjing',
+	'Lookked'
+];
 
-export {members, members16}
+
+
+export {members, members16, memberscgm}

@@ -3,6 +3,7 @@
     import html2canvas from 'html2canvas'
     import { downloadImage } from '../../lib/util';
     import Circle2 from "svelte-loading-spinners/Circle2.svelte";
+    import { memberscgm } from '../../lib/member';
     import { createEventDispatcher } from 'svelte';
 
     const dispatch = createEventDispatcher();
@@ -34,7 +35,7 @@
       await navigator.share({
         files,
         // url: "https://fightforkaning.vercel.app/janken-2023/",
-        text: `ถ้า #${data.query} ชนะ Janken ฉันจะ...`,
+        text: `ถ้า #${data.query}${memberscgm.includes(data.query)? "CGM48": "BNK48"} ชนะ Janken ฉันจะ...`,
         // text: "Beautiful images",
       });
     //   output.textContent = "Shared!";
@@ -68,7 +69,7 @@
 
 <section class="flex flex-col justify-center items-center h-[100vh] gap-8">
     {#if onShareResult}
-            <section class="absolute top-0 left-0 sm:w-full sm:h-full w-[160vw] h-[160vh]">
+            <section class="absolute top-0 left-0 sm:w-full sm:h-full w-[200vw] h-[200vh]">
                 <p class=" absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] z-[51] text-white">Loading Image...</p>
                 <section
                     class="w-full h-full z-[50] bg-white/[0.6] absolute left-0 top-0 flex flex-col justify-center items-center"
