@@ -116,5 +116,3 @@
 	<textarea name="" id="" cols="30" rows="10" bind:value={promise} class="text-gray-800 rounded"></textarea>
 	<Button size="xl" on:click={() => submit()}>Preview</Button>
 </div>
-{query}
-{promise}
