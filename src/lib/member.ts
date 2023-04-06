@@ -59,7 +59,6 @@ const members = [
     "Paeyah",
     "Pakwan",
     "Palmmy",
-    "Pampam",
     "Pancake",
     "Panda",
     "Patt",

@@ -74,7 +74,6 @@
 	{ state: "Paeyah" },
 	{ state: "Pakwan" },
 	{ state: "Palmmy" },
-	{ state: "Pampam" },
 	{ state: "Pancake" },
 	{ state: "Panda" },
 	{ state: "Patt" },
